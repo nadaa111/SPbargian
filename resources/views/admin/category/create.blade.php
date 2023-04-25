@@ -47,7 +47,7 @@
           </div>
           <div class="col-md-12 mb-3">
             <label>Meta Keyword</label>
-            <textarea name="Meta_Keyword" class="form-control" rows="3"></textarea>
+            <textarea name="meta_Keyword" class="form-control" rows="3"></textarea>
           </div>
 
           <div class="col-md-12 mb-3">

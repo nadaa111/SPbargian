@@ -37,9 +37,9 @@ class CategoryController extends Controller
         }
         $category ->image =$filename;
 
-        $category ->meta_title =$validatedData['meta_title'];
-        $category ->meta_keyword =$validatedData['meta_keyword'];
-        $category ->meta_description =$validatedData['meta_description'];
+        $category ->meta_title = $validatedData['meta_title'];
+        $category ->meta_keyword = $validatedData['meta_Keyword'];
+        $category ->meta_description = $validatedData['meta_description'];
         $category ->status=$request-> status == true ? '1':'0';
         $category ->save();
 

@@ -41,7 +41,7 @@ class CategoryFormRequest extends FormRequest
                 'required',
                 'string'
             ],
-            'meta_keyword'=> [
+            'meta_Keyword'=> [
                 'required',
                 'string'
             ],
