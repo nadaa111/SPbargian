@@ -26,12 +26,13 @@
     <td>{{ $category->id  }} </td>
     <td>{{ $category->name  }} </td>
     <td>{{ $category->status == '1' ?'Hiddin' : 'Visible'  }} </td>
-    <td> <a href=""class="btn btn-success">Edit </a>  </td>
+    <td> <a href=" {{url('admin/category/'.$category->id.'/edit') }} "class="btn btn-success">Edit </a>  </td>
     <td> <a href=""class="btn btn-danger">Delete</a>  </td>
 </tr>
 @endforeach
 </tbody>
 </table>
+  <div>    {{ $categories->links()  }}   </div>
 
         </div>
     </div>
