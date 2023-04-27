@@ -12,7 +12,7 @@ class Index extends Component
     protected $paginationTheme = 'bootstrap';
     public $category_id;
 
-public function deleteCategory($category_id)
+public function deleteCategory($category_id) 
 {
 //dd($category_id);    
 $this->category_id = $category_id;

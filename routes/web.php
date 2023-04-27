@@ -36,7 +36,14 @@ Route::controller(App\Http\Controllers\Admin\CategoryController::class)->group(f
     Route::get('/category/{category}/edit', 'edit');
     Route::put('/category/{category}', 'update');
 });
+Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(function () {
+    Route::get('/products', 'index');
+    Route::get('/products/create','create');
+    Route::post('/products','store');
+    
 
+    
+});
 
 
 
