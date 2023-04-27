@@ -28,20 +28,20 @@ class ProductFormRequest extends FormRequest
             ],
             'name'=>[
                 'required',
-                'integer'
+                'string'
             ],
             'slug'=>[
                 'required',
-                'integer',
+                'string',
                 'max:255'
             ],
             'small_description'=>[
                 'required',
-                'integer',
+                'string',
             ],
             'description'=>[
                 'required',
-                'integer',
+                'string',
             ],
             'original_price'=>[
                 'required',
@@ -56,27 +56,30 @@ class ProductFormRequest extends FormRequest
                 'integer',
             ],
             'trending'=>[
-                'required',
-                'integer',
+                'nullable',
             ],
             'status'=>[
-                'required',
-                'integer',
+                'nullable',
             ],
             'meta_title'=>[
                 'required',
-                'integer',
+                'string',
                 'max:255'
 
             ],
             'meta_description'=>[
                 'required',
-                'integer',
+                'string',
             ],
             'meta_keyword'=>[
                 'required',
-                'integer',
+                'string',
             ],
+
+            'image' => [
+                'nullable',
+                //'image|mimes:jpeg,png,jpg'
+            ]
 
             
 

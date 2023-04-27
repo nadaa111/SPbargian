@@ -10,6 +10,17 @@
               </h3>
           </div>
           <div class="card-body">
+
+          @if ($errors->any())
+          <div class="alert alert-warning">
+          @foreach ($errors->all() as $error)
+          <div>{{$error}}</div>
+            @endforeach
+
+        </div>
+
+        @endif
+
             <form action="{{url('admin/products')}}"method="POST" enctype="multipart/form-data">
                 @csrf
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -33,9 +44,8 @@
                         <label>Category</label>
                         <select name="category_id" class="form-control">
                             @foreach ($catigories as $category)
-                                
-                            @endforeach
                             <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
                         </select>
                   </div>
                   <div class="mb-3">
@@ -52,7 +62,7 @@
                   </div>
                   <div class="mb-3">
                     <label>Product Description</label>
-                        <input type="text" name="Description" class="form-control"/>
+                        <input type="text" name="description" class="form-control"/>
                   </div>
                 </div>
                 
@@ -89,7 +99,7 @@
                         </div>
                         <div class="mb-4">
                             <div class="mb-3">
-                                <label>Quanitity</label>
+                                <label>Quantity</label>
                                     <input type="text" name="quanitity" class="form-control"/>
                               </div>
                         </div>
@@ -111,7 +121,7 @@
                     <div class="mb-3">
                         <label>Upload Product Images </label>
                     </div>
-                    <input type="file" name="image" multiple class="form-control">
+                    <input type="file" name="image[]" multiple class="form-control">
                 </div>
               </div>
               <div class="btn btn-primary btn-sm text-white float-end">
