@@ -53,7 +53,7 @@
   <!-- End custom js for this page-->
   @livewireStyles
 
-
+@stack('script')
 
 <div class="container-scroller">
   @include('layouts.inc.admin.navbar')

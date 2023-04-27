@@ -1,5 +1,5 @@
 <div> 
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div   wire:ignore.self  class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -14,8 +14,8 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">yes. delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">yes. Delete</button>
       </div>
 </form>
     </div>
@@ -70,3 +70,16 @@
   </div>
 </div> 
 </div>
+
+@push('script')
+
+<script>
+
+window.addEventListener('close-modal', event=>{
+$('#deleteModal').modal('hide');
+});
+
+  </script>
+
+
+@endpush
