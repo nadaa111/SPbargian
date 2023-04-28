@@ -8,6 +8,11 @@ use Illuminate\Support\Str;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductFormRequest;
+use App\Models\productImage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Filesystem\Filesystem;
+
+
 
 
 class ProductController extends Controller
@@ -120,4 +125,29 @@ public function update(ProductFormRequest $request, int $product_id){
         return redirect('admin/products')->with('message','No Such Product Id Found');
     }
 }
+public function destroyimage(int $product_image_id ){
+$productimage= productImage::findOrFail($product_image_id);
+if(File::exists($productimage->image)){
+    File::delete($productimage->image);
+
+}
+$productimage->delete();
+return redirect()->back()->with('message',' product image Deleted');
+
+}
+public function destroy(int $product_id ){
+    $product= product::findOrFail($product_id);
+    if($product->productImages){
+        foreach($product->productImages as $image){
+            if(File::exists($image->image)){
+                File::delete($image->image);
+            
+            }
+        }
+    }
+    $product->delete();
+    return redirect()->back()->with('message',' product Deleted');
+
+    }
+
 }
