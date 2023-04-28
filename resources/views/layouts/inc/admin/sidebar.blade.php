@@ -7,7 +7,7 @@
             </a>
          
           <li class="nav-item">
-            <a class="nav-link" href="admin/dashboard">
+            <a class="nav-link" href="/admin/dashboard">
               <i class="mdi mdi-chart-pie menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
