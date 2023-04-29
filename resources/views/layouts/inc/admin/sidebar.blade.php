@@ -5,13 +5,6 @@
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">SP Bargain</span>
             </a>
-         
-          <li class="nav-item">
-            <a class="nav-link" href="/admin/dashboard">
-              <i class="mdi mdi-chart-pie menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi-account menu-icon"></i>
@@ -52,6 +45,12 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
               </ul>
             </div>
+            <li class="nav-item">
+            <a class="nav-link" href="{{url('admin/sliders')}}">
+              <i class="mdi mdi-view-carousel menu-icon"></i>
+              <span class="menu-title">Home Slider</span>
+            </a>
+          </li>
 
          
         </ul>
