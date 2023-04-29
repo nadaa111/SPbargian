@@ -32,6 +32,9 @@ Route::controller(App\Http\Controllers\Admin\SliderController::class)->group(fun
   Route::get('sliders','index');
   Route::get('sliders/create','create');
   Route::post('sliders/create','store');
+  Route::get('sliders/{slider}/edit','edit');
+  Route::put('sliders/{slider}', 'update');
+  Route::get('sliders/{slider}/delete','destroy');
 });
 
 //Category Routes
@@ -43,6 +46,7 @@ Route::controller(App\Http\Controllers\Admin\CategoryController::class)->group(f
     Route::put('/category/{category}', 'update');
     Route::get('category/{category_id}/delete','destroy');
 
+
 });
 Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(function () {
     Route::get('/products', 'index');
@@ -52,9 +56,9 @@ Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(fu
     Route::put('/products/{product}', 'update');
     Route::get('products/{product_id}/delete','destroy');
     Route::get('product-image/{product_image_id}/delete','destroyimage');
-    
 
-    
+
+
 });
 
 
