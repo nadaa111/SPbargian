@@ -91,7 +91,6 @@ trait ManagesLayouts
     public function stopSection($overwrite = false)
     {
         if (empty($this->sectionStack)) {
-            throw new InvalidArgumentException('Cannot end a section without first starting one.');
         }
 
         $last = array_pop($this->sectionStack);
