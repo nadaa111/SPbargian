@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-md-5 my-auto">
                         <ul class="nav justify-content-end">
-                            
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
                                     <i class="fa fa-shopping-cart"></i> Cart (0)
@@ -43,8 +43,8 @@
                                 </li>
                             @endif
                         @else
-                           
-                        
+
+
 
 
 
@@ -58,9 +58,9 @@
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
                                 <li>
-                                    
-                               
-                            
+
+
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -70,12 +70,12 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                            
+
                             </li>
-                              @endguest   
+                              @endguest
                                 </ul>
                             </li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -92,13 +92,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">All Categories</a>
+                            <a class="nav-link" href="{{ url('/collections') }}">All Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">New Arrivals</a>
+                            <a class="nav-link" href="{{ url('/new-arrivals') }}">New Arrivals</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Featured Products</a>

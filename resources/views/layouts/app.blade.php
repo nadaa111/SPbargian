@@ -15,7 +15,8 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Styles -->
-    <link herf="{{asset("assets/css/custom.css")}}" rel="stylesheet">
+     <link href ="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href ="{{ asset ('assets/css/custom.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -23,9 +24,9 @@
 <body>
     <div id="app">
         @include("layouts.inc.frontend.navbar")
-         
 
-        <main class="py-4">
+
+        <main >
             @yield('content')
         </main>
     </div>
