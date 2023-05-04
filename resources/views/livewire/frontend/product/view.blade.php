@@ -1,3 +1,3 @@
 <div>
-    {{-- The whole world belongs to you. --}}
+   <h4>Product View Page in Livewire</h4>
 </div>
