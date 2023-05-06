@@ -32,14 +32,13 @@
                         <label>Image</label>
                         <input type="file"  name="image"  class"form-control" />
                     </div>  
-                    <div class="mb-3">
-                         <label>Status</label><br/>
-                         <input type="chechbox"  name="status" style="width:30px;height:30px" />
-                         Checked=Hidden.UnChecked=Visible
-                    </div>     
-                    <div  class="mb-3">
-                        <button type ="submit" class"btn btn-primary">Save</button>
-                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Status</label><br/>
+                        <input type="checkbox" name="status" />
+                      </div>     
+                      <div class="col-md-12 mb-3">
+                        <button type="submit" class="btn btn-primary float-end">Save </button>
+                       </div>
                 </form>    
             </div>
         </div>        

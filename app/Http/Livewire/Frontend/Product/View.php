@@ -7,7 +7,8 @@ use App\Models\Wishlist;
 use Illuminate\Support\Facades\Auth;
 
 class View extends Component
-{    public $category, $product;
+{   
+   public $category, $product;
 
     public function addToWishList($productId)
     {
