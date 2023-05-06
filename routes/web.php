@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +22,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/',[ App\Http\Controllers\Frontend\FrontendController::class,'index']);
+Route::get('/contact-us',[ContactController::class, 'contact']);
+Route::get('/contact',[ContactController::class, 'sendEmail'])->name('contact.us');
+Route::get('/about', function () {
+    return view('about');
+});
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -64,6 +71,8 @@ Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(fu
 
 
 });
+
+
 
 
 
