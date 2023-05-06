@@ -14,8 +14,10 @@
 
 @section('content')
 
-<h4> Product View Page <h4>
+<div>
+    <livewire:frontend.product.view :category="$category" :product="$product" />
+</div>
 
-
+ 
 
 @endsection
