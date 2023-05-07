@@ -32,12 +32,11 @@
                                     <a class="nav-link" href="{{url ('contact-us')}}">
                                          Contact us
                                     </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{url ('About')}}">
-                                     About us
-                                </a>
-                        </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href=" {{ url('About Us')}}">
+                                            </i>About Us
+                                        </a>
+                                    </li>
 
 
 
