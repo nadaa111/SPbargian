@@ -9,9 +9,12 @@ class WishlistShow extends Component
 {
     public function render()
     {
+
         // $wishlist= Wishlist::where('user_id', auth()->user()->id)->get();
-        return view('livewire.frontend.wishlist-show', [
+        return view('livewire.frontend.wishlist-show', 
             // 'wishlist' => $wishlist
-        ]);
+
+
+        );
     }
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Frontend\Product;
 
 use Livewire\Component;
+use App\Models\Wishlist;
+use Illuminate\Support\Facades\Auth;
 
 class View extends Component
 {
@@ -16,22 +18,9 @@ class View extends Component
     {
             $this->category = $category;
             $this->category = $product;
-    }
-    public function render()
-    {
-        return view('livewire.frontend.product.view',[
-            'category' => $this->category,
-            'product' => $this->product
-        ]);
-    }
-    public function incrementQuantity()
-    {
-          $this->quantityCount++;
+{
 
-    }
-    public function decrementQuantity()
-    {
-        $this->quantityCount--;
 
-    }
+}}
+
 }

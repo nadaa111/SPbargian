@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
@@ -22,6 +23,11 @@ use App\Http\Controllers\ContactController;
 Auth::routes();
 
 Route::get('/',[ App\Http\Controllers\Frontend\FrontendController::class,'index']);
+Route::get('/contact-us',[ContactController::class, 'contact']);
+Route::get('/contact',[ContactController::class, 'sendEmail'])->name('contact.us');
+Route::get('/about', function () {
+    return view('about');
+});
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/',[ App\Http\Controllers\Frontend\FrontendController::class,'index']);
@@ -37,6 +43,9 @@ Route::get('/collections/{category_slug}', [App\Http\Controllers\Frontend\Fronte
 Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
 Route::get('whishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
  Route::get('cart', [App\Http\Controllers\Frontend\CartController::class, 'index']);
+Route::get('About Us',[App\Http\Controllers\Frontend\FrontendController::class, 'about']);
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -75,9 +84,11 @@ Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(fu
 
 
 });
-
-
-
-
-
 });
+
+
+
+
+
+
+
