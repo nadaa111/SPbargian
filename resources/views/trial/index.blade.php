@@ -53,7 +53,7 @@
 
                             <div class = "col-md-12">
                             <div class = "mb-3">
-                                <label>Address</label>
+                                <label>Addresss</label>
                                 <textarea  name = "name" value = "" class "form-control" /></textarea>
 </div>
 </div>
