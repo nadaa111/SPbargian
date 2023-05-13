@@ -45,7 +45,7 @@
 
                             <div class = "col-md-6">
                             <div class = "mb-3">
-                                <label>Zip/Pin Code</label>
+                                <label>Zip/Pinn Code</label>
                                 <input type = "text" name = "name" value = "" class "form-control" />
 </div>
 </div>
