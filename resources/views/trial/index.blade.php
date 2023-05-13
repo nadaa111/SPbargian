@@ -9,7 +9,17 @@
                          <div class = "underline mb-4"> </div>
                          <div>
                     <div class = "col-md-10">
+                        @if (session('message'))
+                          <p class="alert-sucess"> {{session('message')}} </p>
+                        @endif
 
+                        @if ($errors->any())
+                             <ul class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                <li class="text-dander">{{$error}}</li>
+                                @endforeach
+                             </ul> 
+                        @endif 
                     <div class = "card shadow">
                     <div class = "card-header bg-primary">
                          <h4 class = "mb-0 text-white" > User Details  </h4>
@@ -23,13 +33,13 @@
                             <div class = "col-md-6">
                             <div class = "mb-3">
                                 <label>Username</label>
-                                <input type = "text" name = "name" value = "" class "form-control" />
+                                <input type = "text" name = "username" value = "{{ Auth::user()->name}}" class "form-control" />
 </div>
 </div>
                             <div class = "col-md-6">
                             <div class = "mb-3">
                                 <label>Email Address </label>
-                                <input type = "text" name = "name" value = "" class "form-control" />
+                                <input type = "text" readonly value = "{{ Auth::user()->email}}" class "form-control" />
 </div>
 </div>
 
@@ -38,7 +48,7 @@
                             <div class = "col-md-6">
                             <div class = "mb-3">
                                 <label>Phone Number</label>
-                                <input type = "text" name = "name" value = "" class "form-control" />
+                                <input type = "text" name = "phone" value = "{{Auth::user()->userDetail->phone ?? ''}}" class "form-control" />
 </div>
 </div>                    
                                 
@@ -46,7 +56,7 @@
                             <div class = "col-md-6">
                             <div class = "mb-3">
                                 <label>Zip/Pinn Code</label>
-                                <input type = "text" name = "name" value = "" class "form-control" />
+                                <input type = "text" name = "pin_code" value = "{{Auth::user()->userDetail->pin_code ?? ''}}"class "form-control" />
 </div>
 </div>
 
@@ -54,13 +64,13 @@
                             <div class = "col-md-12">
                             <div class = "mb-3">
                                 <label>Address</label>
-                                <textarea  name = "name" value = "" class "form-control" /></textarea>
+                                <textarea  name = "address"  class ="form-control" rows="3" >{{Auth::user()->userDetail->address ?? ''}}</textarea>
 </div>
 </div>
 
 
                             <div class = "col-md-12">
-                                <button type "submit" class = "btn btn-primary"> Save Data </button>
+                                <button type ="submit" class = "btn btn-primary"> Save Data </button>
 
 
                                 </div>
