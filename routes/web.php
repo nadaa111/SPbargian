@@ -27,6 +27,7 @@ Route::get('/contact-us',[ContactController::class, 'contact']);
 Route::get('/contact',[ContactController::class, 'sendEmail'])->name('contact.us');
 //Route::get('/profile', 'UserController@index')->name('trial.index');
 Route::get('/profile',[ App\Http\Controllers\Frontend\UserController::class,'index']);
+Route::post('/profile',[ App\Http\Controllers\Frontend\UserController::class,'updateUserDetails']);
 Route::get('/about', function () {
     return view('about');
    
