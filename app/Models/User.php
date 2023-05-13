@@ -23,6 +23,10 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+    public function userDetail()
+    {
+        return $this->hasOne(userDetail::class,'user_id','id');
+    }
     
 
     /**
