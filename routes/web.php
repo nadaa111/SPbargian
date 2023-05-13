@@ -24,8 +24,14 @@ Auth::routes();
 Route::get('/',[ App\Http\Controllers\Frontend\FrontendController::class,'index']);
 Route::get('/contact-us',[ContactController::class, 'contact']);
 Route::get('/contact',[ContactController::class, 'sendEmail'])->name('contact.us');
+//Route::get('/profile', 'UserController@index')->name('trial.index');
+Route::get('/profile',[ App\Http\Controllers\Frontend\UserController::class,'index']);
 Route::get('/about', function () {
     return view('about');
+   
+    //Route::get('/profile/{id}', 'show'); Route::post('/profile', 'store');
+   
+  
 });
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
