@@ -13,7 +13,5 @@ class UserDetail extends Model
         'phone',
         'user_id',
         'pin_code',
-        'address'
-
-    ];
+        'address'];
 }
