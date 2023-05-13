@@ -28,11 +28,14 @@ Route::get('/contact',[ContactController::class, 'sendEmail'])->name('contact.us
 Route::get('/about', function () {
     return view('about');
 });
-
+Route::get('cart',[App\Http\Controllers\Frontend\CartController::class, 'index']);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/',[ App\Http\Controllers\Frontend\FrontendController::class,'index']);
 Route::get('/contact-us',[ContactController::class, 'contact']);
 Route::get('/contact',[ContactController::class, 'sendEmail'])->name('contact.us');
+Route::get('whishlist', [WishlistController::class, 'index']);
+
+
 Route::get('/about', function () {
     return view('about');
 });

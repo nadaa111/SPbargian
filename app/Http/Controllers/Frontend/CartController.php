@@ -8,16 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function addproduct(Request $request){
-        $product_id = $request->input('product_id');
-   if(Auth::check())
-   {
-
-   }
-   else
-   {
-   }
-    }
+  
     public function index()
     {
         return view('frontend.cart.index');

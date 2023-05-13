@@ -5,7 +5,7 @@
 @section('content')
 
 
-< 'livewire:frontend.wishlist-show' />
+<livewire:frontend.wishlist-show/>
 
 
 @endsection

@@ -13,14 +13,31 @@ class View extends Component
     public function addToWishList($product){
       dd($product);
     }
+    public function addToCart(int $productId)
+    {
+         if(Auth::check())
+         {
+         dd($productId);
+            // if($this->product->where('id',$productId)->where('status','0')->exists());
+         }
+             else{
 
-    public function amount($category, $product)
+             }
+            }
+     public function amount($category, $product)
     {
             $this->category = $category;
             $this->category = $product;
-{
+    }
+  public function render(){
+    return view('livewire.frontend.product.view',[
+        'category' => $this->category,
+        'product'=> $this->category
 
+    ]);
+  }
 
-}}
 
 }
+
+
