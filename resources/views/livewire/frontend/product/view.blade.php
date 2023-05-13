@@ -14,6 +14,7 @@
                         @else
                         No Image Added
                         @endif
+
                     </div>
                 </div>
                 <div class="col-md-7 mt-3">
@@ -24,7 +25,8 @@
                         </h4>
                         <hr>
                         <p class="product-path">
-                            Home / {{$product->category->name}} / {{$product->name}}
+
+                            Home / {{$product->category->name}}  / {{$product->name}}
                         </p>
                         <div>
                             <span class="selling-price">{{$product->selling_price}}</span>
@@ -32,27 +34,34 @@
                         </div>
                         <div class="mt-2">
                             <div class="input-group">
+
+                                <input type="hidden" value="{{$product->id}}" class="product_id">
+                                <span class="btn btn1" wire:click="decrementQuantity"><i class="fa fa-minus"></i></span>
+                                <input type="text"wire:model="quantityCount" value="{{ $this->quantityCount}}" class="input-quantity" />
+                                <span class="btn btn1"  wire:click="incrementQuantity"><i class="fa fa-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="mt-2">
                                 <span class="btn btn1"><i class="fa fa-minus"></i></span>
                                 <input type="text" value="1" class="input-quantity" />
                                 <span class="btn btn1"><i class="fa fa-plus"></i></span>
                             </div>
                         </div>
                         <div class="mt-2">
-                            <a href="" class="btn btn1"> <i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                            <button type="button" wire:click="addToCart({{$product->id}})" class="btn btn1"> <i class="fa fa-shopping-cart"></i> Add To Cart</button>
                             <button type="button" wire:click="addToWishList({{ $product->id }})" class="btn btn1">
                                 <span wire:loading.remove>
                                 <i class="fa fa-heart"></i>Add To Wishlist
                                 </span>
-                                
                                 <span wire:loading wire:target="addToWishList">Adding...</span>
-
                                 </button>
-                                 
+
                         </div>
                         <div class="mt-3">
                             <h5 class="mb-0">Small Description</h5>
                             <p>
-                            {!! $product->small_description !!}
+                                {!!$product->small_description!!}
+
                         </div>
                     </div>
                 </div>
@@ -65,12 +74,15 @@
                         </div>
                         <div class="card-body">
                             <p>
-                            {!! $product->description !!}
-                            </p>
+
+                                {!!$product->description!!}
+                                 </p>
+
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
+
+

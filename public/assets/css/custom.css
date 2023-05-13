@@ -1,3 +1,4 @@
+
  /* Cart or Wishlist */
 .shopping-cart .cart-header{
     padding: 10px;
@@ -6,7 +7,7 @@
     font-size: 18px;
     margin-bottom: 0px;
 }
-.shopping-cart .cart-item a{
+/* .shopping-cart .cart-item a{
     text-decoration: none;
 }
 .shopping-cart .cart-item{
@@ -14,7 +15,7 @@
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
     padding: 10px 10px;
     margin-top: 10px;
-}
+} */
 .shopping-cart .cart-item .product-name{
     font-size: 16px;
     font-weight: 600;
@@ -48,7 +49,8 @@
     text-align: center;
 }
 /* Cart or Wishlist */
- 
+
+
  /* Product View */
 .product-view .product-name{
     font-size: 24px;
@@ -102,7 +104,6 @@
 }
 /* Product View */
 
-/* Product Card */
 .product-card{
     background-color: #fff;
     border: 1px solid #ccc;

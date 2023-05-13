@@ -1,3 +1,4 @@
+<div>
 <div class="main-navbar shadow-sm sticky-top">
         <div class="top-navbar">
             <div class="container-fluid">
@@ -19,7 +20,7 @@
                         <ul class="nav justify-content-end">
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ url('cart')}}">
                                     <i class="fa fa-shopping-cart"></i> Cart (0)
                                 </a>
                             </li>
@@ -78,7 +79,7 @@
                                        <i class="fa fa-sign-out"></i> {{ ('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
 
@@ -134,3 +135,4 @@
             </div>
         </nav>
     </div>
+    <div>

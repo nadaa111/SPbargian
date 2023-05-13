@@ -46,21 +46,19 @@ class FrontendController extends Controller
         if ($product)
       {
         return view('frontend.collections.products.view' , compact('product','category'));
-      
-     }else{
-        return redirect()->back();
-     }
-    
-    }else{
-      return redirect()->back();
-   }
-  }
-}
-  
 
-     
-    
- 
+      }
+
+    }}
+}
+
+
+
+
+
+
+
+
 
 
 
